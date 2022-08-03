@@ -32,5 +32,41 @@ public class Main {
         } else {
             System.out.println(year + " год не является высокосным");
         }
+        System.out.println("Задание №4");
+        int deliveryDistance = 95;
+        int deliveryDay = 1;
+        if(deliveryDistance > 20) {
+            deliveryDay++;
+        }
+        if(deliveryDistance > 60) {
+            deliveryDay++;
+            System.out.println(deliveryDay + " дня потребуется");
+        }
+        System.out.println("Задача №5");
+        int monthNumber = 14;
+        switch (monthNumber){
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Весна");
+                break;
+            default:
+                System.out.println("Некорректный месяц " + monthNumber);
+                        }
     }
 }
