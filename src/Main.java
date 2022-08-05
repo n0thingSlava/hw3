@@ -14,11 +14,11 @@ public class Main {
             int classClient = 2015;
             if (clientAndorid == 0 && classClient <= 2014) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                } else if(classClient >=2015) {
+                } else if(clientAndorid == 0 && classClient >=2015) {
                     System.out.println("Установите версию приложения для iOS по ссылке");
             } else if (clientAndorid == 1 && classClient <= 2014) {
                         System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                    } else {
+                    } else if(clientAndorid == 1 && classClient >= 2014) {
                         System.out.println("Установите версию приложения для Android по ссылке");
                     }
                 System.out.println("Задание №3");
