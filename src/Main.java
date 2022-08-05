@@ -3,31 +3,24 @@ import java.sql.SQLOutput;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание №1");
-        int clientOS = 1; // 1>=Andorid ; <=0 iOS
-        if (clientOS <= 0) {
+        int clientOS = 1; // 1=Andorid ; 0= iOS
+        if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }else {
-            if (clientOS >= 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
+        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
             System.out.println("Задание №2");
-            int clientAndorid = 1; //1= Да; 0=Нет
-            int clientIOS = 0;
-            int classClient = 2014;
-            if (clientAndorid <= 0) {
-                if (classClient <= 2015) {
+            int clientAndorid = 0; //1= Да; 0=Нет
+            int classClient = 2015;
+            if (clientAndorid == 0 && classClient <= 2014) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-                } else {
+                } else if(classClient >=2015) {
                     System.out.println("Установите версию приложения для iOS по ссылке");
-                }
-            } else {
-                if (clientIOS >= 1) {
-                    if (classClient >= 2015) {
+            } else if (clientAndorid == 1 && classClient <= 2014) {
                         System.out.println("Установите облегченную версию приложения для Android по ссылке");
                     } else {
                         System.out.println("Установите версию приложения для Android по ссылке");
                     }
-                }
                 System.out.println("Задание №3");
                 int year = 2020;
                 if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -36,17 +29,16 @@ public class Main {
                     System.out.println(year + " год не является высокосным");
                 }
                 System.out.println("Задание №4");
-                int deliveryDistance = 95;
+                int deliveryDistance = 100;
                 int deliveryDay = 1;
-                if (deliveryDistance > 20) {
-                    deliveryDay++;
+                if(deliveryDistance <= 20){
+                    System.out.println("Доставка займет 1 день");
                 }
-                if (deliveryDistance > 60) {
-                    deliveryDay++;
-                    System.out.println(deliveryDay + " дня потребуется");
-                if(deliveryDistance >=100) {
-                    System.out.println("Ты уехал не туда");
+                if (deliveryDistance > 20 && deliveryDistance <60) {
+                    System.out.println("Доставка займет 2 деня");
                 }
+                if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+                    System.out.println("Доставка займет 3 день");
                 }
                 System.out.println("Задача №5");
                 int monthNumber = 14;
@@ -76,5 +68,3 @@ public class Main {
                 }
             }
         }
-    }
-}
