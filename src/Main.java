@@ -10,8 +10,8 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
             System.out.println("Задание №2");
-            int clientAndorid = 0; //1= Да; 0=Нет
-            int classClient = 2015;
+            int clientAndorid = 1; //1= Да; 0=Нет
+            int classClient = 2014;
             if (clientAndorid == 0 && classClient <= 2014) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 } else if(clientAndorid == 0 && classClient >=2015) {
